@@ -6,7 +6,6 @@ var cfg = {
     "./js/main.js"
   ],
   output: {
-    path: path.join(__dirname, "publish"),
     filename: "bundle.js"
   },
   plugins: [
