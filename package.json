@@ -22,7 +22,6 @@
     "fable-compiler": "^0.6.15",
     "fable-core": "^0.6.10",
     "fable-import-pixi": "0.0.10",
-    "pixi": "^0.3.1",
     "pixi.js": "^4.1.1",
     "source-map-loader": "^0.1.5",
     "webpack": "^1.13.3",
