@@ -4,6 +4,8 @@
   "description": "Add numbers while squishing",
   "main": "index.js",
   "scripts": {
+    "build": "fable --target prod",
+    "watch": "fable --target watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -15,5 +17,15 @@
     "math"
   ],
   "author": "Max Wilson",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "fable-compiler": "^0.6.15",
+    "fable-core": "^0.6.10",
+    "fable-import-pixi": "0.0.10",
+    "pixi": "^0.3.1",
+    "pixi.js": "^4.1.1",
+    "source-map-loader": "^0.1.5",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  }
 }

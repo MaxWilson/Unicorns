@@ -1,0 +1,20 @@
+{
+  "module": "commonjs",
+  "sourceMaps": true,
+  "projFile": "TeaganSquish.fsproj",
+  "outDir": "js",
+  "targets": {
+    "prod": {
+      "scripts": {
+        "postbuild": "webpack -p"
+      },
+      "production": true
+    },
+    "watch": {
+      "scripts": {
+        "postbuild-once": "node node_modules/webpack-dev-server/bin/webpack-dev-server.js --colors --hot --config webpack.dev.config"
+      },
+      "watch": true
+    }
+  }
+}
