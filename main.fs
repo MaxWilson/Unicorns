@@ -13,7 +13,7 @@ let gameDiv = document.getElementById("content")
 gameDiv.appendChild(render.view) |> ignore
 
 let stage = Container()
-let pic = Sprite.fromImage("unicorn.png")
+let pic = Sprite.fromImage("Unicorn.png")
 pic.anchor.x <- 0.5
 pic.anchor.y <- 0.5
 pic.position.x <- -600.
