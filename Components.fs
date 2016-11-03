@@ -88,7 +88,7 @@ type UnicornBox(canvasContainer: HTMLElement) =
             let onclick() =
               addUnicorn()
               pic?velocity <- (pic?velocity |> unbox<float>) * -1. + (JS.Math.random() * 0.20 - 0.10)
-              pic.scale.x <- pic.scale.x * -1.
+              p.scale.x <- p.scale.x * -1. // flip pic but not text
             pic.on_click (fun e -> onclick()) |> ignore
             pic.on_tap(fun e -> onclick()) |> ignore
             pic.interactive <- true
