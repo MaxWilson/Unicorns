@@ -103,8 +103,10 @@ type UnicornBox(canvasContainer: HTMLElement) =
             animate_id <- window.requestAnimationFrame(FrameRequestCallback animate)
             for pic in pics do
                 pic.position.x <- (pic.position.x + (float speed * (pic?velocity |> unbox))) // use scale as a speed constant too, so little horses go slower
-                if pic.position.x > (renderer.view.width + pic.width * 0.5) then
+                if (pic.position.x > (renderer.view.width + pic.width * 0.5)) && (pic?velocity |> unbox<float>) > 0. then // right wrap
                     pic.position.x <- pic.width * -0.5
+                if (pic.position.x < abs pic.width * -0.5) && (pic?velocity |> unbox<float>) < 0. then // left wrap
+                    pic.position.x <- (renderer.view.width + (abs pic.width * 0.5))
             renderer.render(stage)
 
         animate 0. // start a pixi animation loop
