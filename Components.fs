@@ -58,6 +58,15 @@ type UnicornBox(canvasContainer: HTMLElement) =
             let sounds = [
                     "Horse1.mp3"
                     "Horse2.mp3"
+                    "Horse1.mp3"
+                    "Horse2.mp3"
+                    "Horse1.mp3"
+                    "Horse2.mp3"
+                    "Horse1.mp3"
+                    "Horse2.mp3"
+                    "Horse1.mp3"
+                    "Horse2.mp3"
+                    "MeowMeowMeowMeow.mp3"
                 ]
             for s in sounds do
                 Audio.Create(s).load() // pre-load all the sounds
@@ -88,7 +97,7 @@ type UnicornBox(canvasContainer: HTMLElement) =
         let rec animate(dt:float) =
             animate_id <- window.requestAnimationFrame(FrameRequestCallback animate)
             for pic in pics do
-                pic.position.x <- (pic.position.x + (float speed))
+                pic.position.x <- (pic.position.x + (float speed * pic.scale.x)) // use scale as a speed constant too, so little horses go slower
                 if pic.position.x > (renderer.view.width + pic.width * 0.5) then
                     pic.position.x <- pic.width * -0.5
             renderer.render(stage)
