@@ -1,7 +1,7 @@
 {
-  "name": "teagansquish",
+  "name": "Unicorns",
   "version": "0.0.1",
-  "description": "Add numbers while squishing",
+  "description": "Make unicorns dance",
   "main": "index.js",
   "scripts": {
     "build": "fable --target prod",
