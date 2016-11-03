@@ -1,0 +1,1 @@
+npm run build && (git branch -D gh-pages || echo "First init") && git checkout -b gh-pages && git add . && git commit -a -m "New version" && git push origin gh-pages -f && git checkout master
