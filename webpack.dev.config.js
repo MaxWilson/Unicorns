@@ -6,6 +6,7 @@ var cfg = {
   entry: [
     'webpack/hot/dev-server',
     'webpack-dev-server/client?http://localhost:8080',
+    "./node_modules/core-js/index.js",
     "./js/main.js"
   ],
   output: {

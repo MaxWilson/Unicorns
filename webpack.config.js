@@ -3,6 +3,7 @@ var webpack = require("webpack");
 
 var cfg = {
   entry: [
+    "./node_modules/core-js/index.js",
     "./js/main.js"
   ],
   output: {

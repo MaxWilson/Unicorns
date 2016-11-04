@@ -9,6 +9,11 @@ open Fable.Import.PIXI
 open Fable.Import.React
 open Fable.Import.React_Extensions
 
+[<Emit("""if(!window.Audio) { window.Audio = function() { }; Audio.prototype = { play: function() { return Promise.resolve(); }, load: function() { return Promise.resolve(); } } }
+""")>]
+let browserCompat() = jsNative; // workarounds for Safari, etc.
+browserCompat();
+
 module R = Fable.Helpers.React
 open R.Props
 
